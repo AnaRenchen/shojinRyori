@@ -1,5 +1,293 @@
-body{
-    background-color: #556B2F ;
-    color: #FFFFFF; 
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+  body{
+    background-color: white;
+    color:#222831;
     font-family: 'Yu Gothic', sans-serif;
 }
+
+
+.nav {
+    margin-bottom: 70px;
+    margin-top: 30px;
+    margin-bottom: 50px !important;
+    font-family: 'Yu Gothic', sans-serif;
+
+  }
+  
+
+  .nav a {
+    float: left;
+    display: block;
+    color:#222831;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+ 
+  .nav a:hover {
+    color: black !important;
+    background-color: #ead279;
+  }
+
+  /* Encabezados principales */
+.titulo-index {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 3rem;
+  color:#222831;
+}
+
+.subtitulo-shojin {
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Sección de información */
+.info-shojin {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.info-shojin p {
+  margin: 20px 0;
+  text-align: justify;
+}
+.info-shojin strong {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.significado-shojin ul {
+  list-style-type: disc;
+  padding:0;
+  margin-left: 40px;
+  margin-bottom: 15px;
+}
+
+.significado-shojin li {
+  padding: 5px 0;
+  color: #5c5c5c;
+}
+
+.significado-shojin p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Estilo del carrusel */
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Estilo para listas y texto */
+ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+  /* Estilo para toda la sección */
+.info-compasion {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+/* Estilo para el título */
+.info-compasion h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Estilo para los párrafos */
+.info-compasion p {
+  margin-bottom: 15px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+/* Estilo para las listas */
+.info-compasion ul {
+  list-style-type: disc;
+  margin-left: 40px;
+  margin-bottom: 15px;
+  padding:0;
+}
+
+.info-compasion ul li {
+  margin-bottom: 10px;
+}
+
+/* Estilo para resaltar los términos importantes */
+.info-compasion strong {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Estilo para las citas */
+.info-compasion blockquote {
+  background-color:#ead279;
+  border-left: 5px solid #e74c3c;
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-style: italic;
+  font-size: 15px;
+}
+
+/* Estilo para el texto dentro de blockquote */
+.info-compasion blockquote p {
+  margin: 10px 0;
+}
+
+/* Estilo para el fondo y las sombras */
+.info-compasion {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    font-family: 'Yu Gothic', sans-serif;
+}
+
+.search-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+.search-section input{
+    width: 30rem;
+    padding: 1rem;
+    border: solid 1px #2c3e50;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    color: #5a5a4a; 
+    font-size: 1rem;
+    font-family: 'Yu Gothic', sans-serif;
+}
+
+.search-section button{
+    padding: 0.8rem 1.2rem; 
+    border: none;
+    border-radius: 1.5rem;
+    background-color: #d0a13d ; 
+    color: black;
+    font-size: 1rem;
+    font-family: 'Yu Gothic', sans-serif;
+}
+
+.search-section button:hover {
+    background-color: #ead279; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+  width: 50rem; /* Largura máxima da caixa de resultados */
+  height: 50vh; /* Altura máxima da caixa de resultados */
+  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  margin-top: 2rem; /* Espaçamento acima da caixa de resultados */
+  padding: 1rem; /* Espaçamento interno */
+  border-radius: 0.6rem; /* Borda arredondada */
+
+}
+
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+    background:#ead279; /* Cor de fundo dos itens */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #222831; /* Cor do texto */
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.item-resultado a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #30475E; /* Cor do texto dos links */
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+    color: #45474B; /* Cor do texto */
+    margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+
+.container-recetas{
+  font-family: 'Yu Gothic', sans-serif;
+  color: black;
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: 75rem; 
+  margin: 0 auto; 
+  padding: 1rem;
+  margin-top: 2rem;
+
+}
+
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  background-color:#423127;
+  color: white; 
+  font-size: 1rem;
+  padding: 10px;
+}
+
+
+  
+  
+
+
