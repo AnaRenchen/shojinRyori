@@ -214,6 +214,11 @@ h1{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+.container{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
@@ -280,8 +285,8 @@ footer {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  background-color:#423127;
-  color: white; 
+  background-color:#556B2F ;
+  color:#222831; 
   font-size: 1rem;
   padding: 10px;
 }
