@@ -49,7 +49,7 @@ function search() {
       results += `<div class="item-resultado">
     <h2>${item.title}</h2>
     <p>${item.description}</p>
-    <a href="recetas/recipe.html?id=${i}" "target=_blank"> Receta Completa </a>
+    <a href="recipe.html?id=${i}" "target=_blank"> Receta Completa </a>
   </div>`;
     }
   }
@@ -70,10 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // Si hay un ID de receta, carga los detalles de la receta
   if (recipeId !== null && recipeId >= 0 && recipeId < data.length) {
     const receta = data[recipeId];
+    const tituloReceta = document.getElementById("title");
     const listaIngredientes = document.getElementById("ingredientes");
     const contenedorInstrucciones = document.getElementById("instrucciones");
 
-    // Agregar ingredientes
+    // Agregar título
+    if (tituloReceta) {
+      const h2 = document.createElement("h2");
+      h2.textContent = receta.title;
+      tituloReceta.appendChild(h2);
+    }
+
+    // Agregar ingredientes (recorre con forEach porque es un array)
     if (listaIngredientes) {
       receta.ingredients.forEach((ingredient) => {
         const li = document.createElement("li");
@@ -82,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Agregar instrucciones
+    // Agregar instrucciones (recorre con forEach porque es un array)
     if (contenedorInstrucciones && receta.instruction) {
       receta.instruction.forEach((instruction) => {
         const p = document.createElement("p");
@@ -98,18 +106,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.createElement("div");
     container.className = "container text-center";
 
-    const row = document.createElement("div");
-    row.className = "row align-items-center";
-
-    // Itera sobre los datos y crea un elemento <li> para cada receta
+    let row; // Variable para crear nuevas filas
     data.forEach((item, i) => {
+      // Crear una nueva fila cada 3 recetas
+      if (i % 3 === 0) {
+        row = document.createElement("div");
+        row.className = "row align-items-center mb-3"; // Nueva fila con margen abajo
+        container.appendChild(row);
+      }
+
+      // Crear la columna de Bootstrap para cada receta
       const col = document.createElement("div");
       col.className = "col"; // Clase de columna de Bootstrap
-
       // Crear un enlace que apunte a la página de detalles de la receta
       const link = document.createElement("a");
       link.textContent = item.title; // Texto del enlace es el título de la receta
-      link.href = `recetas/recipe.html?id=${i}`; // Enlace con el ID de la receta
+      link.href = `recipe.html?id=${i}`; // Enlace con el ID de la receta
       link.target = "_self"; // Abrir en la misma pestaña
 
       col.appendChild(link); // Agregar el enlace a la columna
