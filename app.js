@@ -1,3 +1,20 @@
+let lastScrollTop = 0; // Variable para guardar la posición anterior del scroll
+const header = document.getElementById("main-header");
+
+window.addEventListener("scroll", function () {
+  let scrollTop = document.documentElement.scrollTop;
+
+  // Si el usuario está haciendo scroll hacia abajo
+  if (scrollTop > lastScrollTop) {
+    header.classList.add("hidden"); // Oculta el header
+  } else {
+    header.classList.remove("hidden"); // Muestra el header
+  }
+
+  // Actualiza la posición anterior del scroll
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
 function showAlert(message) {
   Swal.fire({
     text: message,

@@ -11,6 +11,20 @@
     font-family: 'Yu Gothic', sans-serif;
 }
 
+#main-header {
+  transition: transform 0.3s ease-in-out;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+#main-header.hidden {
+  transform: translateY(-100%);
+}
+
+
+
+
 
 .nav {
     margin-bottom: 70px;
@@ -322,6 +336,4 @@ footer {
 
 
   
-  
-
 
