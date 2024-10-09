@@ -2,6 +2,7 @@ let data = [
   {
     title: "Goma Dofu",
     description: "Tofu de sésamo blanco",
+    portions: "Sirve entre 8 y 10 porciones",
     ingredients: [
       "500 ml (1/2 litro) de agua filtrada o de manantial",
       "Un trozo de 5 cm de kombu (opcional)",
@@ -9,7 +10,7 @@ let data = [
       "70 gramos de pasta de sésamo blanco (puedes usar tahini de Oriente Medio o neri-goma japonés, lo que sea más fácil de encontrar)",
       "1 cucharada de sake (opcional)",
     ],
-    image: "https://example.com/tofu-scramble.jpg",
+    image: "https://i.postimg.cc/MGMXQ31y/goma-dofu.jpg",
     tags: "sésamo, tofu, koyasan",
     link: "./recetas/recipe.html",
     instruction: [
@@ -23,10 +24,21 @@ let data = [
   {
     title: "Misoshiru",
     description: "Sopa de miso",
-    ingredients: ["tofu", "pasta de miso", "verduras"],
-    image: "https://example.com/tofu-scramble.jpg",
+    portions: "Sirve 2 porciones",
+    ingredients: [
+      "2 tazas de agua (500ml)",
+      "2 cucharadas soperas de pasta de miso (40g)",
+      "1/3 de tofu (aproximadamente 100g) cortado en cubos",
+      "Opcional: alga wakame cortada en trozos, hongos shitakes hidratados y cortados en trozos, espinaca blanqueda y cortada, etc",
+    ],
+    image: "https://i.postimg.cc/yYY21DqZ/misoSoup.webp",
     tags: "miso, sopa, tofu",
     link: "./recetas/recipe.html",
+    instruction: [
+      "Hierva el agua. Separe 2 cuencos y coloque 1 cucharada de pasta de miso en cada uno. Agregue poco a poco el agua caliente a cada cuenco, disolviendo la pasta de miso. Finalmente, agregue los cubos de tofu.",
+      "Si está utilizando otros ingredientes, agréguelos también al final.",
+      "Tip adicional: Unas gotas de aceite de sésamo pueden darle un sabor muy rico a la sopa de miso.",
+    ],
   },
   {
     title: "Ganmodoki",
@@ -37,10 +49,18 @@ let data = [
     link: "./recetas/recipe.html",
   },
   {
-    title: "Ganmodoki",
-    description: "Hamburguesitas de tofu",
-    ingredients: ["tofu, zanahoria, fécula, porotos"],
-    image: "https://example.com/tofu-scramble.jpg",
+    title: "Kinoko-Gohan (Arroz con hongos)",
+    description: "Arroz con hongos y otros vegetales.",
+    portions: "Sirve 4 porciones",
+    ingredients: [
+      "300 gramos de arroz (preferentemente arroz japonés como koshihikari, arroz fortuna o doble carolina)",
+      "50 gramos de zanahoria",
+      "100 gramos de hongos shimeji, portobelo o champiñón",
+      "2 hongos shitake frescos o hidratados",
+      "80 gramos de batata",
+      "2 cucharadas soperas de salsa de soja",
+    ],
+    image: "https://i.postimg.cc/q7vN7bDX/kinoko-gohan.jpg",
     tags: "sésamo, tofu, koyasan",
     link: "./recetas/recipe.html",
   },

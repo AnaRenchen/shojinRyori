@@ -279,6 +279,39 @@ h1{
   margin-bottom: 80px;
 }
 
+.image-ingredientes {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center;
+  align-content: center;
+  gap: 2rem; 
+  margin-bottom:50px;
+  
+}
+
+#photo-recipe{
+  width: 50%;
+  max-width: 100%; 
+  height: auto; 
+  margin-bottom: 20px;
+}
+
+.container-ingredientes {
+  background-color: #f0db92;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  list-style-type: disc;
+  width: 45%;
+}
+
+#portions{
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: end;
+  margin-bottom: 35px;
+}
+
 
 /* Estilo para la caja de resultados de la búsqueda*/
 .resultados-pesquisa {

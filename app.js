@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tituloReceta = document.getElementById("title");
     const listaIngredientes = document.getElementById("ingredientes");
     const contenedorInstrucciones = document.getElementById("instrucciones");
+    const photoRecipe = document.getElementById("photo-recipe");
 
     // Agregar título
     if (tituloReceta) {
@@ -98,7 +99,19 @@ document.addEventListener("DOMContentLoaded", () => {
       tituloReceta.appendChild(h2);
     }
 
-    // Agregar ingredientes (recorre con forEach porque es un array)
+    // Agregar porciones
+    if (portions) {
+      const p = document.createElement("p");
+      p.textContent = receta.portions;
+      portions.appendChild(p);
+    }
+
+    // Agregar imagenes (recorre con forEach porque es un array)
+    if (photoRecipe && receta.image) {
+      photoRecipe.src = receta.image;
+    }
+
+    // Agregar ingredientes (no hace falta el foreach pq no es un array y cada receta tiene su id distinto)
     if (listaIngredientes) {
       receta.ingredients.forEach((ingredient) => {
         const li = document.createElement("li");
@@ -126,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let row; // Variable para crear nuevas filas
     data.forEach((item, i) => {
       // Crear una nueva fila cada 3 recetas
-      if (i % 3 === 0) {
+      if (i % 4 === 0) {
         row = document.createElement("div");
         row.className = "row align-items-center mb-3"; // Nueva fila con margen abajo
         container.appendChild(row);
