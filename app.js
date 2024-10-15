@@ -81,7 +81,7 @@ function search() {
 document.addEventListener("DOMContentLoaded", () => {
   // Lógica de inicialización
   const urlParams = new URLSearchParams(window.location.search);
-  const recipeId = urlParams.get("id");
+  const recipeId = parseInt(urlParams.get("id"), 10);
   const listaNames = document.getElementById("recetas");
 
   // Si hay un ID de receta, carga los detalles de la receta
