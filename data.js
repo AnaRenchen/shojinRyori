@@ -1,5 +1,6 @@
 let data = [
   {
+    id: 1,
     title: "Goma Dofu (Tofu de sésamo)",
     description: "Tofu de sésamo blanco",
     portions: "Sirve entre 8 y 10 porciones",
@@ -22,6 +23,7 @@ let data = [
     ],
   },
   {
+    id: 2,
     title: "Misoshiru",
     description: "Sopa de miso",
     portions: "Sirve 2 porciones",
@@ -41,6 +43,7 @@ let data = [
     ],
   },
   {
+    id: 3,
     title: "Ganmodoki",
     description: "Hamburguesitas de tofu",
     portions: "Se hacen aproximadamente 11 hamburguesitas",
@@ -70,6 +73,7 @@ let data = [
     ],
   },
   {
+    id: 4,
     title: "Kinoko-Gohan (Arroz con hongos)",
     description: "Arroz con hongos y otros vegetales.",
     portions: "Sirve 4 porciones",
