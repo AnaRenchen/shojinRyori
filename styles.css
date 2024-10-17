@@ -239,15 +239,15 @@ h1{
 }
 .container a {
   font-family: 'Yu Gothic', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
+  letter-spacing: 0.1rem;
   text-decoration: none;
   color:#222831;
 }
 
 .container a:hover{
-  background-color:#d0a13d;
-  padding: 5px;
-  border-radius: 10px;
+  color:#d0a13d;
+  font-weight:500;
 }
 
 /* Estilos para cada receta*/

@@ -19,11 +19,9 @@ function limpiarContenedorRecetas() {
 
 function mostrarRecetas(arregloRecetas) {
   const listaNames = document.getElementById("recetas"); // Contenedor principal donde se muestran las recetas
-  // Limpiar el contenedor antes de agregar nuevas recetas
-  limpiarContenedorRecetas();
+  limpiarContenedorRecetas(); // Limpiar el contenedor antes de agregar nuevas recetas
 
   if (listaNames) {
-    // Crear el contenedor principal con Bootstrap
     const container = document.createElement("div");
     container.className = "container text-center";
 
@@ -40,20 +38,41 @@ function mostrarRecetas(arregloRecetas) {
       const col = document.createElement("div");
       col.className = "col"; // Clase de columna de Bootstrap
 
-      // Crear un enlace que apunte a la página de detalles de la receta
+      // Crear una card de Bootstrap para cada receta
+      const card = document.createElement("div");
+      card.className = "card"; // Clase de tarjeta de Bootstrap
+      card.style.width = "15rem"; // Ancho opcional de la card
+
+      // Crear el cuerpo de la card con la imagen y el título
+      const img = document.createElement("img");
+      img.src = item.image; // La URL de la imagen
+      img.alt = item.title; // El título como texto alternativo
+      img.className = "card-img-top"; // Clase de Bootstrap para la imagen en la card
+
+      const cardBody = document.createElement("div");
+      cardBody.className = "card-body"; // Cuerpo de la card
+
+      // Crear el enlace que apunte a la página de detalles de la receta
       const link = document.createElement("a");
       link.textContent = item.title; // Texto del enlace es el título de la receta
       link.href = `recipe.html?id=${item.id}`; // Enlace con el ID de la receta
       link.target = "_self"; // Abrir en la misma pestaña
+      link.className = "card-title"; // Clase de título de la card
 
-      // Agregar el enlace, la descripción y el precio a la columna
-      col.appendChild(link);
+      // Agregar los elementos a la estructura de la card
+      cardBody.appendChild(link); // Agregar el título al cuerpo de la card
+      card.appendChild(img); // Agregar la imagen a la card
+      card.appendChild(cardBody); // Agregar el cuerpo de la card
+
+      // Agregar la card a la columna
+      col.appendChild(card);
 
       // Agregar la columna a la fila
       row.appendChild(col);
     });
 
-    listaNames.appendChild(container); // Agregar el contenedor a la lista de recetas
+    // Finalmente, agregar el contenedor completo a la lista de recetas
+    listaNames.appendChild(container);
   }
 }
 
