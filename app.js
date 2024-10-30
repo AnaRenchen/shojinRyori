@@ -1,5 +1,7 @@
 let lastScrollTop = 0; // Variable para guardar la posición anterior del scroll
 const header = document.getElementById("main-header");
+let currentPage = 1;
+const recipePerPage = 8;
 
 function showAlert(message) {
   Swal.fire({
@@ -17,16 +19,20 @@ function limpiarContenedorRecetas() {
   listaNames.innerHTML = "";
 }
 
-function mostrarRecetas(arregloRecetas) {
+function mostrarRecetas(arregloRecetas, actualPage = 1) {
   const listaNames = document.getElementById("recetas"); // Contenedor principal donde se muestran las recetas
   limpiarContenedorRecetas(); // Limpiar el contenedor antes de agregar nuevas recetas
+
+  const firstPage = (actualPage - 1) * recipePerPage;
+  const lastPage = firstPage + recipePerPage;
+  const recipesPage = arregloRecetas.slice(firstPage, lastPage); // Obtener las recetas de la página actual
 
   if (listaNames) {
     const container = document.createElement("div");
     container.className = "container text-center";
 
     let row; // Variable para crear nuevas filas
-    arregloRecetas.forEach((item, i) => {
+    recipesPage.forEach((item, i) => {
       // Crear una nueva fila cada 4 recetas
       if (i % 4 === 0) {
         row = document.createElement("div");
@@ -48,9 +54,13 @@ function mostrarRecetas(arregloRecetas) {
       img.src = item.image; // La URL de la imagen
       img.alt = item.title; // El título como texto alternativo
       img.className = "card-img-top"; // Clase de Bootstrap para la imagen en la card
+      img.style.width = "100%"; // Asegura que la imagen ocupe todo el ancho de la card
+      img.style.height = "150px"; // Define una altura fija para la imagen
+      img.style.objectFit = "cover"; // Escala la imagen para llenar el espacio sin deformarse
 
       const cardBody = document.createElement("div");
       cardBody.className = "card-body"; // Cuerpo de la card
+      cardBody.style.height = "80px"; // Fijar la altura del cuerpo de la card
 
       // Crear el enlace que apunte a la página de detalles de la receta
       const link = document.createElement("a");
@@ -73,7 +83,37 @@ function mostrarRecetas(arregloRecetas) {
 
     // Finalmente, agregar el contenedor completo a la lista de recetas
     listaNames.appendChild(container);
+    showPagination(arregloRecetas.length, actualPage);
   }
+}
+
+function showPagination(totalRecipes, actualPage) {
+  const totalPages = Math.ceil(totalRecipes / recipePerPage);
+  const paginationDiv = document.getElementById("pagination");
+  paginationDiv.innerHTML = "";
+
+  const ul = document.createElement("ul");
+  ul.className = "pagination justify-content-center ";
+
+  for (let i = 1; i <= totalPages; i++) {
+    const li = document.createElement("li");
+    li.className = `page-item  ${i === actualPage ? "active" : ""}`;
+
+    const link = document.createElement("a");
+    link.className = "page-link";
+    link.textContent = i;
+    link.href = "#";
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      currentPage = i;
+      mostrarRecetas(data, currentPage);
+    });
+
+    li.appendChild(link);
+    ul.appendChild(li);
+  }
+
+  paginationDiv.appendChild(ul);
 }
 
 function search() {
@@ -97,8 +137,9 @@ function search() {
       "No se encontraron recetas. Intenta con otro término de búsqueda."
     );
   } else {
+    currentPage = 1;
     // Llama a la función para recorrer el arreglo de recetas con las recetas filtradas
-    mostrarRecetas(filteredRecetas);
+    mostrarRecetas(filteredRecetas, currentPage);
   }
 }
 

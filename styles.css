@@ -20,15 +20,11 @@
 
 #main-header.hidden {
   transform: translateY(-100%);
+  background-color:#ead279;
 }
-
-
-
-
 
 .nav {
     margin-bottom: 70px;
-    margin-top: 30px;
     margin-bottom: 50px !important;
     font-family: 'Yu Gothic', sans-serif;
   }
@@ -41,6 +37,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    margin-top: 30px;
   }
   
   .nav a:hover {
@@ -250,6 +247,36 @@ h1{
   font-weight:500;
 }
 
+/* Estilos para paginación recetas*/
+
+.page-item .page-link {
+  color: #222831;
+  background-color:white;
+  padding: 8px 12px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+  border:2px solid #ead279;
+  border-radius: 10px;
+  font-family: 'Yu Gothic', sans-serif;
+}
+.page-item .page-link:hover {
+  background-color:#ead279;
+  color: #222831;
+}
+.page-item.active .page-link {
+  background-color:white;
+  color:#222831;
+  border:2px solid #ead279 ;
+  border-radius: 10px;
+  
+}
+.page-item.disabled .page-link {
+  background-color:#d0a13d !important;
+  color:#222831;
+  border-color: #d0a13d !important ;
+}
+
+
 /* Estilos para cada receta*/
 
 .titulo-nombre-receta{
@@ -313,47 +340,6 @@ h1{
 }
 
 
-/* Estilo para la caja de resultados de la búsqueda*/
-.resultados-pesquisa {
-  width: 50rem; /* Largura máxima da caixa de resultados */
-  height: 50vh; /* Altura máxima da caixa de resultados */
-  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-  margin-top: 2rem; /* Espaçamento acima da caixa de resultados */
-  padding: 1rem; /* Espaçamento interno */
-  border-radius: 0.6rem; /* Borda arredondada */
-
-}
-
-/* Estiliza cada item de resultado */
-.item-resultado {
-    background:#ead279; /* Cor de fundo dos itens */
-    border-radius: 0.6rem; /* Borda arredondada */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    margin-top: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-}
-/* Estiliza los ítulos adentro de los intems de resultado */
-.item-resultado h2 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
-}
-
-/* Estiliza los links adentro de los intems de resultado  */
-.item-resultado a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
-}
-
-.item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-}
-
-/* Estiliza la descripción meta adentro de los items del resultado*/
-.descricao-meta {
-    color: #45474B; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem acima e abaixo */
-}
 
 /*Estilo para contacto */
 
