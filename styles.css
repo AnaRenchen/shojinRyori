@@ -195,7 +195,7 @@ h1{
 
 /*Estilo para sección de búsqueda de recetas*/
 .search-section{
-  font-family: 'Yu Gothic', sans-serif;
+    font-family: 'Yu Gothic', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -339,6 +339,22 @@ h1{
   margin-bottom: 35px;
 }
 
+#curiosidad-container {
+  margin-top: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.08;
+  font-size: 0.9rem;
+  display: inline-block;  /* Ajusta el tamaño automáticamente al contenido */
+  border: 1px solid transparent;
+  padding: 15px;          
+  margin-left: auto;      
+  max-width: 700px;       /* Opcional: establece un ancho máximo */
+  box-sizing: border-box;
+  word-wrap: break-word; 
+  background-color: #f0ebe6;
+  color:#2c3e50;
+}
+
 
 
 /*Estilo para contacto */
@@ -387,10 +403,23 @@ footer {
   align-content: center;
   justify-content: center;
   background-color:#556B2F ;
-  color: #212529;
-  font-size: 1rem;
-  padding: 10px;
+  min-height:20vh;
 }
+
+.text-footer{
+  margin: 40px 280px 40px 280px;
+  color: #212529;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.scroll-container{
+  display: flex;
+  justify-content:flex-end;
+  padding: 20px;
+  margin-right: 20px;
+}
+
 
 
   

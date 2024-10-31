@@ -1,3 +1,47 @@
+const dataUrl = "/data/data.json"; // Ruta ajustada al servidor
+let data;
+
+async function obtenerRecetas() {
+  try {
+    const response = await fetch(dataUrl);
+
+    if (!response.ok) {
+      throw new Error(
+        `Error en la petición: ${response.status} ${response.statusText}`
+      );
+    }
+    data = await response.json();
+    return data;
+  } catch (error) {
+    Swal.fire({
+      text: "Error en la petición realizada. :(",
+      color: "white",
+      toast: "true",
+      background: "white",
+      confirmButtonText: "Ok",
+      confirmButtonColor: "black",
+      timer: 5000,
+    });
+  }
+}
+
+// Cargar y mostrar recetas al inicio
+document.addEventListener("DOMContentLoaded", async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const recipeId = parseInt(urlParams.get("id"), 10);
+
+  data = await obtenerRecetas();
+
+  if (recipeId) {
+    cargarDetalleReceta(recipeId); // Pasamos `recetas` como parámetro
+  } else {
+    mostrarRecetas(data);
+  }
+  // Agregar el evento de búsqueda al campo de texto
+  const searchInput = document.getElementById("campo-pesquisa");
+  searchInput.addEventListener("click", search);
+});
+
 let lastScrollTop = 0; // Variable para guardar la posición anterior del scroll
 const header = document.getElementById("main-header");
 let currentPage = 1;
@@ -33,21 +77,21 @@ function mostrarRecetas(arregloRecetas, actualPage = 1) {
 
     let row; // Variable para crear nuevas filas
     recipesPage.forEach((item, i) => {
-      // Crear una nueva fila cada 4 recetas
-      if (i % 4 === 0) {
+      // Crear una nueva fila cada 3 recetas
+      if (i % 3 === 0) {
         row = document.createElement("div");
-        row.className = "row align-items-center mb-3"; // Nueva fila con margen abajo
+        row.className = "row justify-content-start align-items-center mb-4"; // Nueva fila con margen abajo
         container.appendChild(row);
       }
 
       // Crear la columna de Bootstrap para cada receta
       const col = document.createElement("div");
-      col.className = "col"; // Clase de columna de Bootstrap
+      col.className = "col-4 d-flex justify-content-center"; // Clase de columna de Bootstrap
 
       // Crear una card de Bootstrap para cada receta
       const card = document.createElement("div");
       card.className = "card"; // Clase de tarjeta de Bootstrap
-      card.style.width = "15rem"; // Ancho opcional de la card
+      card.style.width = "20rem"; // Ancho opcional de la card
 
       // Crear el cuerpo de la card con la imagen y el título
       const img = document.createElement("img");
@@ -55,12 +99,13 @@ function mostrarRecetas(arregloRecetas, actualPage = 1) {
       img.alt = item.title; // El título como texto alternativo
       img.className = "card-img-top"; // Clase de Bootstrap para la imagen en la card
       img.style.width = "100%"; // Asegura que la imagen ocupe todo el ancho de la card
-      img.style.height = "150px"; // Define una altura fija para la imagen
+      img.style.height = "200px"; // Define una altura fija para la imagen
       img.style.objectFit = "cover"; // Escala la imagen para llenar el espacio sin deformarse
 
       const cardBody = document.createElement("div");
-      cardBody.className = "card-body"; // Cuerpo de la card
-      cardBody.style.height = "80px"; // Fijar la altura del cuerpo de la card
+      cardBody.className =
+        "card-body d-flex align-items-center justify-content-center"; // Añadir clases de Bootstrap para centrar
+      cardBody.style.height = "90px"; // Fijar la altura del cuerpo de la card
 
       // Crear el enlace que apunte a la página de detalles de la receta
       const link = document.createElement("a");
@@ -173,6 +218,15 @@ function cargarDetalleReceta(recipeId) {
       p.textContent = instruction;
       contenedorInstrucciones.appendChild(p);
     });
+
+    // Mostrar curiosidad solo si existe
+    const curiosidadContainer = document.getElementById("curiosidad-container");
+    if (receta.curiosidad) {
+      curiosidadContainer.style.display = "block"; // Mostrar el contenedor
+      document.getElementById("curiosidad").textContent = receta.curiosidad;
+    } else {
+      curiosidadContainer.style.display = "none"; // Ocultar el contenedor si no hay curiosidad
+    }
   }
 }
 
@@ -187,20 +241,4 @@ window.addEventListener("scroll", function () {
     header.classList.remove("hidden");
   }
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evitar valores negativos
-});
-
-// Inicialización del DOM
-document.addEventListener("DOMContentLoaded", () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const recipeId = parseInt(urlParams.get("id"), 10);
-
-  // Cargar receta si se proporciona un ID en la URL
-  if (recipeId) {
-    cargarDetalleReceta(recipeId);
-  } else {
-    mostrarRecetas(data);
-  }
-
-  // Agregar el evento de búsqueda al campo de texto
-  document.getElementById("campo-pesquisa");
 });
