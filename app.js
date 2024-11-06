@@ -1,4 +1,4 @@
-const dataUrl = "/data/data.json"; // Ruta ajustada al servidor
+const dataUrl = "../data/data.json"; // Ruta ajustada al servidor
 let data;
 
 async function obtenerRecetas() {
@@ -15,7 +15,7 @@ async function obtenerRecetas() {
   } catch (error) {
     Swal.fire({
       text: "Error en la petición realizada. :(",
-      color: "white",
+      color: "black",
       toast: "true",
       background: "white",
       confirmButtonText: "Ok",
