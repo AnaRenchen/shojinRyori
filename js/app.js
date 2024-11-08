@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   // Agregar el evento de búsqueda al campo de texto
   const searchInput = document.getElementById("campo-pesquisa");
-  searchInput.addEventListener("click", search);
 });
 
 let currentPage = 1;
@@ -73,23 +72,21 @@ function mostrarRecetas(arregloRecetas, actualPage = 1) {
     const container = document.createElement("div");
     container.className = "container text-center";
 
-    let row; // Variable para crear nuevas filas
-    recipesPage.forEach((item, i) => {
-      // Crear una nueva fila cada 3 recetas
-      if (i % 3 === 0) {
-        row = document.createElement("div");
-        row.className = "row justify-content-start align-items-center mb-4"; // Nueva fila con margen abajo
-        container.appendChild(row);
-      }
+    // Crear una única fila que contenga todas las tarjetas
+    const row = document.createElement("div");
+    row.className = "row justify-content-start align-items-center mb-4"; // Fila de Bootstrap
+    container.appendChild(row);
 
+    recipesPage.forEach((item) => {
       // Crear la columna de Bootstrap para cada receta
       const col = document.createElement("div");
-      col.className = "col-4 d-flex justify-content-center"; // Clase de columna de Bootstrap
+      col.className =
+        "col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center"; // Ajuste de columnas según tamaño de pantalla
 
       // Crear una card de Bootstrap para cada receta
       const card = document.createElement("div");
       card.className = "card"; // Clase de tarjeta de Bootstrap
-      card.style.width = "20rem"; // Ancho opcional de la card
+      card.style.width = "100%"; // Para que ocupe todo el ancho de la columna
 
       // Crear el cuerpo de la card con la imagen y el título
       const img = document.createElement("img");
@@ -102,7 +99,7 @@ function mostrarRecetas(arregloRecetas, actualPage = 1) {
 
       const cardBody = document.createElement("div");
       cardBody.className =
-        "card-body d-flex align-items-center justify-content-center"; // Añadir clases de Bootstrap para centrar
+        "card-body d-flex align-items-center justify-content-center"; // Centrado del contenido de la card
       cardBody.style.height = "90px"; // Fijar la altura del cuerpo de la card
 
       // Crear el enlace que apunte a la página de detalles de la receta
@@ -120,7 +117,7 @@ function mostrarRecetas(arregloRecetas, actualPage = 1) {
       // Agregar la card a la columna
       col.appendChild(card);
 
-      // Agregar la columna a la fila
+      // Agregar la columna a la única fila
       row.appendChild(col);
     });
 
