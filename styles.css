@@ -447,44 +447,17 @@ footer {
   
   .titulo-nombre-receta {
     font-size: 1.5rem; 
-    letter-spacing: 0.2rem;
     margin-bottom: 20px;
   }
   
   .image-ingredientes {
     flex-direction: row; 
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 20px;
+  }
+
+  .contacto-info {
+    font-size: 1rem;
   }
   
-  #photo-recipe {
-    width: 100%; 
-    margin-bottom: 15px;
-  }
-  
-  .container-ingredientes {
-    width: 100%; 
-    padding: 1rem;
-    margin-bottom: 20px;
-  }
-  
-  #portions {
-    font-size: 0.8rem; 
-    text-align: center; 
-    margin-bottom: 20px;
-  }
-  
-  .instrucciones-recetas {
-    font-size: 1rem; 
-    padding: 1rem;
-  }
-  
-  #curiosidad-container {
-    max-width: 100%; 
-    margin-top: 10px; 
-    padding: 1rem;
-  }
 }
 
 @media only screen and (max-width: 890px) {
@@ -504,41 +477,15 @@ footer {
     flex-direction: column-reverse; 
     align-items: center;
     gap: 1rem;
-    margin-bottom: 20px;
   }
   
   #photo-recipe {
     width: 80%; 
-    margin-bottom: 15px;
   }
   
-  .container-ingredientes {
-    width: 100%; 
-    padding: 1rem;
-    margin-bottom: 20px;
-  }
-  
-  #portions {
-    font-size: 0.8rem; 
-    text-align: center; 
-    margin-bottom: 20px;
-  }
-  
-  .instrucciones-recetas {
-    font-size: 1rem; 
-    padding: 1rem;
-  }
-  
-  #curiosidad-container {
-    max-width: 100%; 
-    margin-top: 10px; 
-    padding: 1rem;
-  }
-
   .text-footer{
     margin: 50px 20px 50px 20px;
     line-height: 20px;
-    color: #212529;
     font-size: 0.8rem;
     text-align: center;
   }
@@ -549,16 +496,16 @@ footer {
     display: flex;
     justify-content:center;
     padding: 0px;
-    margin-right: 0px;
     margin-bottom: 20px;
   }
+
   .text-footer{
     margin: 50px 20px 50px 20px;
     line-height: 20px;
-    color: #212529;
     font-size: 0.8rem;
     text-align: center;
   }
+
   .titulo-index {
     font-size: 2.5rem;
   }
@@ -581,8 +528,7 @@ footer {
 
 .titulo-nombre-receta {
   font-size: 1.5rem; 
-  letter-spacing: 0.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .image-ingredientes {
@@ -643,7 +589,27 @@ footer {
   margin-top: 20px;
   
 }
+}
+@media only screen and (max-width: 480px) {
+  .titulo-nombre-receta {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .container-ingredientes, 
+  .instrucciones-recetas, 
+  #curiosidad-container {
+    padding: 0.5rem;
+  }
 
+  #photo-recipe {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .contacto-info {
+    font-size: 0.9rem;
+  }
 }
 
 
