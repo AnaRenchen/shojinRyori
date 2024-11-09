@@ -1,6 +1,7 @@
 const dataUrl = "../data/data.json"; // Ruta ajustada al servidor
 let data;
 
+//Obtener recetas del archivo JSON
 async function obtenerRecetas() {
   try {
     const response = await fetch(dataUrl);
@@ -10,13 +11,14 @@ async function obtenerRecetas() {
         `Error en la petición: ${response.status} ${response.statusText}`
       );
     }
+    //Convierte la respuesta a JSON
     data = await response.json();
     return data;
   } catch (error) {
     Swal.fire({
       text: "Error en la petición realizada. :(",
       color: "black",
-      toast: "true",
+      toast: true,
       background: "white",
       confirmButtonText: "Ok",
       confirmButtonColor: "black",
@@ -25,31 +27,31 @@ async function obtenerRecetas() {
   }
 }
 
-// Cargar y mostrar recetas al inicio
+// Cargar la página y mostrar recetas al inicio
 document.addEventListener("DOMContentLoaded", async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const recipeId = parseInt(urlParams.get("id"), 10);
 
   data = await obtenerRecetas();
 
+  //Si hay un Id en los parámetros de la Url, muestra el detalle de esta receta
   if (recipeId) {
-    cargarDetalleReceta(recipeId); // Pasamos `recetas` como parámetro
+    cargarDetalleReceta(recipeId);
   } else {
+    // Si no, muestra todas las recetas
     mostrarRecetas(data);
   }
-  // Agregar el evento de búsqueda al campo de texto
-  const searchInput = document.getElementById("campo-pesquisa");
 });
 
 let currentPage = 1;
-const recipePerPage = 8;
+const recipePerPage = 8; //Número de recetas por página
 
 function showAlert(message) {
   Swal.fire({
     text: message,
-    background: "#f2f2f2",
+    background: "white",
     color: "#333",
-    confirmButtonColor: "#808080",
+    confirmButtonColor: "#556B2F",
     toast: true,
   });
 }
@@ -60,84 +62,87 @@ function limpiarContenedorRecetas() {
   listaNames.innerHTML = "";
 }
 
+//Función para mostrar las recetas en la página actual
 function mostrarRecetas(arregloRecetas, actualPage = 1) {
-  const listaNames = document.getElementById("recetas"); // Contenedor principal donde se muestran las recetas
-  limpiarContenedorRecetas(); // Limpiar el contenedor antes de agregar nuevas recetas
+  const listaNames = document.getElementById("recetas");
+  limpiarContenedorRecetas();
 
+  //Calcular el rango de recetas a mostrar en la página actual
   const firstPage = (actualPage - 1) * recipePerPage;
   const lastPage = firstPage + recipePerPage;
-  const recipesPage = arregloRecetas.slice(firstPage, lastPage); // Obtener las recetas de la página actual
+  const recipesPage = arregloRecetas.slice(firstPage, lastPage);
 
   if (listaNames) {
+    //Crea un contener principal para las tarjetas de recetas
     const container = document.createElement("div");
     container.className = "container text-center";
 
-    // Crear una única fila que contenga todas las tarjetas
     const row = document.createElement("div");
-    row.className = "row justify-content-start align-items-center mb-4"; // Fila de Bootstrap
+    row.className = "row justify-content-start align-items-center mb-4";
     container.appendChild(row);
 
+    //Crea cada tarjeta de recetas
     recipesPage.forEach((item) => {
-      // Crear la columna de Bootstrap para cada receta
       const col = document.createElement("div");
       col.className =
-        "col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center"; // Ajuste de columnas según tamaño de pantalla
+        "col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center mb-4";
 
-      // Crear una card de Bootstrap para cada receta
       const card = document.createElement("div");
-      card.className = "card"; // Clase de tarjeta de Bootstrap
-      card.style.width = "100%"; // Para que ocupe todo el ancho de la columna
+      card.className = "card";
+      card.style.width = "100%";
 
-      // Crear el cuerpo de la card con la imagen y el título
+      //Enlace que envuelve la imagen apuntando a los detalles de la receta
+      const linkWrapper = document.createElement("a");
+      linkWrapper.href = `recipe.html?id=${item.id}`;
+      linkWrapper.className = "card-link";
+
       const img = document.createElement("img");
-      img.src = item.image; // La URL de la imagen
-      img.alt = item.title; // El título como texto alternativo
-      img.className = "card-img-top"; // Clase de Bootstrap para la imagen en la card
-      img.style.width = "100%"; // Asegura que la imagen ocupe todo el ancho de la card
-      img.style.height = "200px"; // Define una altura fija para la imagen
-      img.style.objectFit = "cover"; // Escala la imagen para llenar el espacio sin deformarse
+      img.src = item.image;
+      img.alt = item.title;
+      img.className = "card-img-top";
+      img.style.width = "100%";
+      img.style.height = "200px";
+      img.style.objectFit = "cover";
 
       const cardBody = document.createElement("div");
       cardBody.className =
-        "card-body d-flex align-items-center justify-content-center"; // Centrado del contenido de la card
-      cardBody.style.height = "90px"; // Fijar la altura del cuerpo de la card
+        "card-body d-flex align-items-center justify-content-center";
+      cardBody.style.height = "90px";
 
-      // Crear el enlace que apunte a la página de detalles de la receta
-      const link = document.createElement("a");
-      link.textContent = item.title; // Texto del enlace es el título de la receta
-      link.href = `recipe.html?id=${item.id}`; // Enlace con el ID de la receta
-      link.target = "_self"; // Abrir en la misma pestaña
-      link.className = "card-title"; // Clase de título de la card
+      const linkTitle = document.createElement("a");
+      linkTitle.textContent = item.title;
+      linkTitle.href = `recipe.html?id=${item.id}`;
+      linkTitle.className = "card-title";
+      linkTitle.style.textDecoration = "none";
 
-      // Agregar los elementos a la estructura de la card
-      cardBody.appendChild(link); // Agregar el título al cuerpo de la card
-      card.appendChild(img); // Agregar la imagen a la card
-      card.appendChild(cardBody); // Agregar el cuerpo de la card
+      //Añade el título al cuerpo de la tarjeta y la imagen al enlace envolvente
+      cardBody.appendChild(linkTitle);
+      linkWrapper.appendChild(img);
+      card.appendChild(linkWrapper);
+      card.appendChild(cardBody);
 
-      // Agregar la card a la columna
+      //Añade la tarjeta a la columna y la columna a la fila
       col.appendChild(card);
-
-      // Agregar la columna a la única fila
       row.appendChild(col);
     });
 
-    // Finalmente, agregar el contenedor completo a la lista de recetas
+    //Añade el contenedor completo de tarjetas al contenedor principal en el DOM
     listaNames.appendChild(container);
     showPagination(arregloRecetas.length, actualPage);
   }
 }
-
+//Paginación en el contenedor
 function showPagination(totalRecipes, actualPage) {
   const totalPages = Math.ceil(totalRecipes / recipePerPage);
   const paginationDiv = document.getElementById("pagination");
   paginationDiv.innerHTML = "";
 
   const ul = document.createElement("ul");
-  ul.className = "pagination justify-content-center ";
+  ul.className = "pagination justify-content-center";
 
   for (let i = 1; i <= totalPages; i++) {
     const li = document.createElement("li");
-    li.className = `page-item  ${i === actualPage ? "active" : ""}`;
+    li.className = `page-item ${i === actualPage ? "active" : ""}`;
 
     const link = document.createElement("a");
     link.className = "page-link";
@@ -156,12 +161,13 @@ function showPagination(totalRecipes, actualPage) {
   paginationDiv.appendChild(ul);
 }
 
+//Búsqueda de recetas
 function search() {
   const searchTerm = document
     .getElementById("campo-pesquisa")
     .value.toLowerCase();
 
-  // Filtrar las recetas que coinciden con el término de búsqueda
+  // Filtra recetas en base al término de búsqueda
   const filteredRecetas = data.filter(
     (item) =>
       item.title.toLowerCase().includes(searchTerm) ||
@@ -178,12 +184,10 @@ function search() {
     );
   } else {
     currentPage = 1;
-    // Llama a la función para recorrer el arreglo de recetas con las recetas filtradas
     mostrarRecetas(filteredRecetas, currentPage);
   }
 }
 
-// Función para cargar los detalles de una receta específica
 function cargarDetalleReceta(recipeId) {
   const receta = data.find((item) => item.id === recipeId);
 
@@ -196,31 +200,28 @@ function cargarDetalleReceta(recipeId) {
       photoRecipe.src = receta.image;
     }
 
-    // Agregar ingredientes
     const listaIngredientes = document.getElementById("ingredientes");
-    listaIngredientes.innerHTML = ""; // Limpiar antes de agregar
+    listaIngredientes.innerHTML = "";
     receta.ingredients.forEach((ingredient) => {
       const li = document.createElement("li");
       li.textContent = ingredient;
       listaIngredientes.appendChild(li);
     });
 
-    // Agregar instrucciones
     const contenedorInstrucciones = document.getElementById("instrucciones");
-    contenedorInstrucciones.innerHTML = ""; // Limpiar antes de agregar
+    contenedorInstrucciones.innerHTML = "";
     receta.instruction.forEach((instruction) => {
       const p = document.createElement("p");
       p.textContent = instruction;
       contenedorInstrucciones.appendChild(p);
     });
 
-    // Mostrar curiosidad solo si existe
     const curiosidadContainer = document.getElementById("curiosidad-container");
     if (receta.curiosidad) {
-      curiosidadContainer.style.display = "block"; // Mostrar el contenedor
+      curiosidadContainer.style.display = "block";
       document.getElementById("curiosidad").textContent = receta.curiosidad;
     } else {
-      curiosidadContainer.style.display = "none"; // Ocultar el contenedor si no hay curiosidad
+      curiosidadContainer.style.display = "none";
     }
   }
 }
