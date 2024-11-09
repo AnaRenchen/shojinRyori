@@ -12,7 +12,7 @@
       "1 cucharada de sake (opcional)"
     ],
     "image": "https://i.postimg.cc/VLPx26Rk/tofu-temple.png",
-    "tags": "sésamo, tofu, koyasan, gomadofu",
+    "tags": "sésamo, sesamo, tofu, koyasan, gomadofu",
     "link": "./recetas/recipe.html",
     "instruction": [
       "Ponga el agua y el kombu (si lo usa) en un bol y deje reposar durante al menos 1 hora. Retire el kombu y deséchelo, o resérvelo para otro uso (yo lo agrego al agua cuando cocino legumbres, se dice que ayuda a que sean más fáciles de digerir).",
@@ -58,7 +58,7 @@
       "Aceite para freír"
     ],
     "image": "https://i.postimg.cc/htrjQXd6/ganmodoki2.webp",
-    "tags": "hijiki, tofu, koyasan, hamburguesas",
+    "tags": "hijiki, tofu, koyasan, hamburguesas, algas",
     "link": "./recetas/recipe.html",
     "instruction": [
       "Envuelve el tofu en papel de cocina y coloca un peso encima para escurrir el agua durante aproximadamente una hora. Mientras tanto, ralla la zanahoria, corta los hongos en trozos pequeños, corta finamente las edamames o soja (o aplasta groseramente las arvejas) y remoja el alga hijiki en 1/2 taza de agua.",
@@ -86,7 +86,7 @@
       "2 cucharadas de salsa de soja"
     ],
     "image": "https://i.postimg.cc/q7vN7bDX/kinoko-gohan.jpg",
-    "tags": "arroz, verduras, hongos, salsa de soja, koyasan",
+    "tags": "arroz, verduras, hongos, salsa de soja, shoyu, koyasan",
     "link": "./recetas/recipe.html",
     "instruction": [
       "Primero, lave el arroz hasta que el agua se vuelva un poco transparente (unas 4 veces). Ponga el arroz en un colador y deje que se escurra durante unos 10 minutos.",
@@ -116,7 +116,7 @@
       "2 cucharaditas de agua (para disolver la fécula)"
     ],
     "image": "https://i.postimg.cc/8ckYhKyn/koya_dofu_ankake.jpg",
-    "tags": "tofu, koya dofu, frito, salsa dulce, ankake, vegetales",
+    "tags": "tofu, koya dofu, koyadofu, frito, salsa dulce, ankake, vegetales",
     "link": "./recetas/recipe.html",
     "instruction": [
       "Si usar Koya Dofu es necesario reconstruirlo sumergiéndolo en agua hasta que esté suave. Si usar el tofu congelado es necesario descongelarlo. Luego presionarlo suavemente entre las palmas para eliminar el exceso de agua. Envolver en una toalla de papel para secar la superficie.",
@@ -141,13 +141,43 @@
       "Salsa de soja"
     ],
     "image": "https://i.postimg.cc/Mpb1YmjK/Whats-App-Image-2024-10-30-at-6-28-00-PM.jpg",
-    "tags": "arroz, onigiri, parrilla, koyasan",
+    "tags": "arroz, onigiri, parrilla, koyasan, sésamo, sesamo, salsa de soja, shoyu",
     "link": "./recetas/recipe.html",
     "instruction": [
       "Mezcle el arroz cocido con sal y un poco de aceite de sésamo en un bol. Forme pequeñas bolas o triángulos con el arroz.",
       "Caliente una sartén a fuego medio y coloque los onigiris en la sartén. Cocine durante unos minutos por cada lado hasta que estén dorados y crujientes.",
       "Cuando estén casi listos, unte un poco de salsa de soja en cada lado y cocine un poco más.",
       "Sirva caliente, espolvoreado con semillas de sésamo."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Agedashi-dofu (Tofu Frito con Salsa Dashi vegana)",
+    "description": "Tofu frito cubierto con daikon rallado y jengibre, servido con una salsa de caldo dashi vegano.",
+    "portions": "Sirve 4 porciones",
+    "ingredients": [
+      "2 bloques de tofu firme, con un peso total de 600-700 g",
+      "100 g de rábano daikon",
+      "1 trozo (15 g) de jengibre",
+      "10-15 g de shiitake seco",
+      "2 cucharadas de salsa de soja",
+      "2 cucharaditas de azúcar",
+      "Harina",
+      "Aceite vegetal"
+    ],
+    "image": "https://i.postimg.cc/7PsrhR29/agedashi-dofu.jpg",
+    "tags": "tofu, frito, daikon, jengibre, shiitake, shoyu, agedashi, salsa de soja, dashi",
+    "link": "./recetas/recipe.html",
+    "instruction": [
+      "Primero, prepara la salsa a base de caldo dashi y las guarniciones. Añade la salsa de soja, el azúcar y el shiitake a 1 taza o 200 ml de agua y lleva a ebullición a fuego medio. Apaga el fuego y cuela la mezcla con un colador. Para un caldo más claro, usa una hoja de papel de cocina en el colador.",
+      "Pela el daikon y el jengibre. Rállalos por separado con un rallador. Asegúrate de rallarlos en un ángulo recto con respecto a la fibra. Coloca el daikon rallado en un colador para que escurra, sin exprimirlo.",
+      "Corta los 2 bloques de tofu en cuartos, en piezas de aproximadamente 4 x 5 cm y 4 cm de alto. Coloca los trozos en un colador grande y plano para que escurran.",
+      "Añade suficiente aceite vegetal a una sartén para alcanzar una profundidad de 4 a 5 cm y calienta a 180 °C.",
+      "Esparce un poco de harina en una bandeja. Coloca un trozo de tofu sobre una toalla de cocina limpia y seca para secarlo. Luego, cubre el tofu con la harina, asegurándote de que todos los lados queden cubiertos, y elimina el exceso de harina.",
+      "Fríe el tofu en el aceite caliente de inmediato. Asegúrate de enharinar el tofu justo antes de freírlo. No enharines todos los trozos a la vez; enharina cada trozo mientras lo colocas en el aceite.",
+      "Fríe el tofu durante aproximadamente 1 minuto y retíralo cuando esté dorado claro y se haya inflado un poco. Una vez que hayas frito todo el tofu, colócalo en un plato hondo y cúbrelo con el daikon y el jengibre rallados.",
+      "Recalienta la salsa a base de caldo dashi y vierte alrededor del tofu en el plato. El plato está listo para servirse.",
+      "*Los pedazos de tofu son grandes. También se puede cortar el bloque de tofu en 8 porciones para que sean más chicos."
     ]
   }
 ]

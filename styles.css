@@ -357,15 +357,15 @@ h1{
 }
 
 #curiosidad-container {
-  margin-top: 20px;
+  margin: 30px auto; /* Centra horizontalmente y agrega espacio superior */
+  display: block;  /* Para que respete el ancho máximo y se centre */
   font-family:Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 0.08;
   font-size: 0.9rem;
   display: inline-block;  /* Ajusta el tamaño automáticamente al contenido */
   border: 1px solid transparent;
-  padding: 15px;          
-  margin-left: auto;      
-  max-width: 700px;       /* Opcional: establece un ancho máximo */
+  padding: 15px;             
+  max-width: 700px;       
   box-sizing: border-box;
   word-wrap: break-word; 
   background-color: #f0ebe6;
@@ -376,9 +376,9 @@ h1{
 /*Estilo para contacto */
 
 .contacto-info {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
   font-family: 'Yu Gothic', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
@@ -395,7 +395,8 @@ h1{
 }
 
 .imagen-contacto {
-  width: 30%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .pagina-fudoji {
@@ -592,8 +593,7 @@ footer {
 }
 
 #photo-recipe {
-  width: 80%; 
-  margin-bottom: 15px;
+  width: 100%; 
 }
 
 .container-ingredientes {
