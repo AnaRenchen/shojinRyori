@@ -179,5 +179,60 @@
       "Recalienta la salsa a base de caldo dashi y vierte alrededor del tofu en el plato. El plato está listo para servirse.",
       "*Los pedazos de tofu son grandes. También se puede cortar el bloque de tofu en 8 porciones para que sean más chicos."
     ]
+  },
+  {
+    "id": 8,
+    "title": "Ensalada Shojin con Aderezo de Tofu y Maní",
+    "description": "Ensalada fresca con un cremoso aderezo de tofu, maní y limón, perfecta para realzar el sabor de las verduras frescas.",
+    "portions": "Rinde 4 porciones",
+    "ingredients": [
+      "1 bloque de tofu (preferentemente blando), aproximadamente 200g",
+      "2 cucharadas de mantequilla de maní sin azúcar",
+      "2 cucharadas de vinagre de arroz o cualquier vinagre blanco",
+      "2 cucharadas de aceite de oliva",
+      "2 cucharadas de maple syrup o 1 cucharada de azúcar",
+      "Una pizca de pimienta negra",
+      "1 cucharadita de sal",
+      "2 cucharadas de jugo de limón",
+      "8 espárragos, sin las extremidades fibrosas",
+      "4 hojas de lechuga, cortadas en trozos grandes",
+      "300g de tomates, cortados en cubos de 1cm, o tomates cherry cortados a la mitad",
+      "2 paltas, cortados en cubos de 1cm",
+      "2 pepinos japoneses, cortados en cubos de 1cm"
+    ],
+    "image": "https://i.postimg.cc/4NF7b0QW/ensalada-shojin2.jpg",
+    "tags": "ensalada, tofu, maní, vegano, saludable, fresco, lechuga, tomate, limón, palta, mani",
+    "link": "./recetas/ensalada-shojin.html",
+    "instruction": [
+      "Prepara el tofu: Envuelve el tofu en una toalla de papel, coloca un plato encima y dejélo en la heladera durante aproximadamente 30 minutos para eliminar el exceso de humedad.",
+      "Haga el aderezo: En un procesador de alimentos, mezcla el tofu, la mantequilla de maní, el vinagre, el aceite de oliva, el maple syrup o azúcar, la pimienta negra, la sal y el jugo de limón hasta obtener una consistencia cremosa.",
+      "Blanquea los espárragos: Cocina los espárragos en agua hirviendo por unos segundos, escúrrelos, sumérgelos en agua fría y luego córtalos en diagonal en trozos de 2-3 cm.",
+      "Arma la ensalada: Coloca la lechuga en un plato o bowl para servir. Agrega los espárragos, los tomates, la palta y el pepino, finalmente cubre con el aderezo de tofu y maní.",
+      "Consejos adicionales: Si no se encuentra tofu blando, usar tofu firme, agregando un poco más de líquido al aderezo para que quede más cremoso. Ajusta la cantidad de vinagre y maple syrup o azúcar según su gusto. Para una presentación más atractiva, decora la ensalada con semillas de sésamo o trozos de maní."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Calabaza Frita con Salsa de Maní",
+    "description": "Rodajas de calabaza doradas y tiernas, acompañadas con una salsa cremosa de maní y miso.",
+    "portions": "Rinde 4 porciones",
+    "ingredients": [
+      "4 cucharadas de aceite de sésamo o aceite de oliva",
+      "Aproximadamente 400 gramos de calabaza kabocha, kikuzuki o una variedad similar, sin semillas ni fibra, cortada en rodajas finas",
+      "6 cucharadas de mantequilla de maní sin azúcar",
+      "2 cucharaditas de miso blanco o 1 cucharadita de miso rojo",
+      "2 cucharadas de sake o vino blanco seco",
+      "3 cucharadas de jugo de limón",
+      "2 cucharadas de mirin o 1 cucharada de azúcar"
+    ],
+    "image": "https://i.postimg.cc/fRSgK6mC/calabaza-mani3.jpg",
+    "tags": "calabaza, maní, mani, miso, frito, guarnición, vegano. aceite de sésamo, aceite de sesamo, limón, otoño",
+    "link": "./recetas/calabaza-frita.html",
+    "instruction": [
+      "Fríe la calabaza: Calienta el aceite de sésamo o de oliva en una sartén grande a fuego medio. Agrega las rodajas de calabaza y fríelas, tapadas, durante 10-15 minutos por cada lado, o hasta que estén doradas y tiernas. Alternativamente, puede pincelar las rodajas de calabaza con aceite y hornearlas en el horno a 160°C durante 15 minutos.",
+      "Prepara la salsa: En un tazón pequeño, combina la mantequilla de maní, el miso, el sake, el jugo de limón y el mirin (o azúcar). Mezcla bien hasta obtener una salsa cremosa.",
+      "Sirve: Coloca las rodajas de calabaza frita en un plato para servir. Vierte la salsa de maní por encima. Si quiere puede agregar trocitos de maní sobre el plato.",
+      "Sugerencias: Se puede utilizar cualquier variedad de calabaza. La calabaza kabocha y kikuzuki son buenas opciones por su sabor dulce y textura firme. Ajusta la cantidad de miso y azúcar en la salsa según su preferencia de sabor, y acompaña el plato con arroz, quinoa o ensalada."
+    ]
   }
 ]
