@@ -200,9 +200,9 @@
       "2 paltas, cortados en cubos de 1cm",
       "2 pepinos japoneses, cortados en cubos de 1cm"
     ],
-    "image": "https://i.postimg.cc/4NF7b0QW/ensalada-shojin2.jpg",
+    "image": "https://i.postimg.cc/fRwtBnV9/ensalada-shojin2.jpg",
     "tags": "ensalada, tofu, maní, vegano, saludable, fresco, lechuga, tomate, limón, palta, mani",
-    "link": "./recetas/ensalada-shojin.html",
+    "link": "./recetas/recipe.html",
     "instruction": [
       "Prepara el tofu: Envuelve el tofu en una toalla de papel, coloca un plato encima y dejélo en la heladera durante aproximadamente 30 minutos para eliminar el exceso de humedad.",
       "Haga el aderezo: En un procesador de alimentos, mezcla el tofu, la mantequilla de maní, el vinagre, el aceite de oliva, el maple syrup o azúcar, la pimienta negra, la sal y el jugo de limón hasta obtener una consistencia cremosa.",
@@ -227,12 +227,123 @@
     ],
     "image": "https://i.postimg.cc/fRSgK6mC/calabaza-mani3.jpg",
     "tags": "calabaza, maní, mani, miso, frito, guarnición, vegano. aceite de sésamo, aceite de sesamo, limón, otoño",
-    "link": "./recetas/calabaza-frita.html",
+    "link": "./recetas/recipe.html",
     "instruction": [
       "Fríe la calabaza: Calienta el aceite de sésamo o de oliva en una sartén grande a fuego medio. Agrega las rodajas de calabaza y fríelas, tapadas, durante 10-15 minutos por cada lado, o hasta que estén doradas y tiernas. Alternativamente, puede pincelar las rodajas de calabaza con aceite y hornearlas en el horno a 160°C durante 15 minutos.",
       "Prepara la salsa: En un tazón pequeño, combina la mantequilla de maní, el miso, el sake, el jugo de limón y el mirin (o azúcar). Mezcla bien hasta obtener una salsa cremosa.",
       "Sirve: Coloca las rodajas de calabaza frita en un plato para servir. Vierte la salsa de maní por encima. Si quiere puede agregar trocitos de maní sobre el plato.",
       "Sugerencias: Se puede utilizar cualquier variedad de calabaza. La calabaza kabocha y kikuzuki son buenas opciones por su sabor dulce y textura firme. Ajusta la cantidad de miso y azúcar en la salsa según su preferencia de sabor, y acompaña el plato con arroz, quinoa o ensalada."
     ]
+  },
+  {
+    "id": 10,
+    "title": "Tempura de Banana",
+    "description": "Rodajas de banana cubiertas con una ligera masa de tempura y fritas hasta dorarse, perfectas para un postre ligero.",
+    "portions": "Rinde 4 porciones",
+    "ingredients": [
+      "4 bananas, peladas y cortadas en diagonal en rodajas de aproximadamente 2 cm de grosor",
+      "½ taza (60 gramos) de harina para todo uso",
+      "⅓ taza (80 ml) de agua",
+      "½ cucharadita de sal",
+      "2 cucharaditas de semillas de sésamo blanco, tostadas",
+      "Aceite vegetal para freír",
+      "Un toque de té verde en polvo o canela en polvo (opcional, para espolvorear)"
+    ],
+    "image": "https://i.postimg.cc/mDrNrMLr/banana-tempura3.jpg",
+    "tags": "banana, tempura, frito, postre, vegano, sésamo, matcha, canela",
+    "link": "./recetas/recipe.html",
+    "instruction": [
+      "Prepara la masa: En un bol, mezcla la harina, el agua, la sal y las semillas de sésamo hasta obtener una masa homogénea.",
+      "Fríe las bananas: Calienta abundante aceite vegetal en una sartén a 170°C. Sumerge las rodajas de banana en la masa, asegurándose de cubrirlas por completo. Fríelas hasta que estén doradas. Tenga cuidado, las bananas se queman fácilmente, así que no las cocine en exceso.",
+      "Sirve: Coloca las bananas fritas en platos individuales y espolvorea con té verde en polvo o canela al gusto.",
+      "Nota: Asegúrese de que el aceite esté a la temperatura correcta para obtener una fritura perfecta. Si el aceite está demasiado frío, las bananas absorberán demasiado aceite. Si está demasiado caliente, se quemarán por fuera antes de cocinarse por dentro."
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Hamburguesitas de Papa y Alga Nori",
+    "description": "Hamburgesitas crujientes de papa con alga nori, con un toque de salsa de soja y mirin.",
+    "portions": "Rinde 16 hamburguesitas",
+    "ingredients": [
+      "120 gramos de papas, peladas",
+      "1 hoja de alga nori, aproximadamente 19x21 cm",
+      "1/2 cucharada de aceite de sésamo",
+      "1 cucharada de mirin mezclada con 1 cucharada de salsa de soja",
+      "1 cucharadita de semillas de sésamo blanco, tostadas (opcional)",
+      "Shichimi togarashi, para decorar (opcional)"
+    ],
+    "image": "https://i.postimg.cc/tTkMxQZz/seaweed-patties.jpg",
+    "tags": "papa, alga nori, frito, japonés, vegano, hamburguesita, salsa de soja",
+    "link": "./recetas/recipe.html",
+    "instruction": [
+      "Puré de papa: En un procesador de alimentos, procesa las papas hasta obtener una pasta gruesa. Envuelve la pasta en papel absorbente para eliminar el exceso de humedad.",
+      "Armado de las hamburgesitas: Corta el alga nori en 16 cuadrados. Coloca una cucharada de puré de papa sobre cada cuadrado de nori.",
+      "Freír: Calienta el aceite de sésamo en una sartén. Fríe las hamburguesitas con el lado del nori hacia abajo hasta que el puré de papa esté dorado. Luego, fríe brevemente el lado del nori.",
+      "Servir: Coloca las hamburguesitas en un plato. Rocía con la mezcla de mirin y salsa de soja. Decora con semillas de sésamo tostado y shichimi togarashi al gusto.",
+      "Nota: El shichimi togarashi es una mezcla de especias japonesa que le dará un toque picante y aromático a tus tortitas. Si no tiene shichimi togarashi, puede utilizar otras especias como pimienta negra o paprika. Puede ajustar la cantidad de puré de papa en cada tortita según su preferencia."
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Kakiage de Papa y Zanahoria",
+    "description": "Kakiage crujiente de papa, zanahoria y perejil fresco, acompañado de una salsa Tendashi.",
+    "portions": "Rinde 4 porciones",
+    "ingredients": [
+      "120 gramos de zanahoria, cortada en tiras finas (6 cm de largo, 1/2 cm de grosor)",
+      "120 gramos de papa, cortada en tiras finas (6 cm de largo, 1/2 cm de grosor)",
+      "2 cucharadas de perejil fresco picado",
+      "1 taza (200 ml) de agua helada",
+      "1 1/2 tazas (150 gramos) de harina",
+      "Aceite vegetal para freír",
+      "150 ml de agua (para la salsa Tendashi)",
+      "2 cucharadas (30 ml) de salsa de soja",
+      "2 cucharaditas (6 gramos) de azúcar",
+      "1 trozo pequeño de alga kombu (para la salsa Tendashi)"
+    ],
+    "image": "https://i.postimg.cc/0QZ4qcRn/kakiage.jpg",
+    "tags": "kakiage, papa, zanahoria, perejil, vegano, japonés",
+    "link": "./recetas/recipe",
+    "instruction": [
+      "Corta las verduras: Corta la zanahoria y la papa en tiras finas de aproximadamente 6 cm de largo y 1/2 cm de grosor. Pica finamente el perejil fresco.",
+      "Prepara la masa: En un bol grande, mezcla el agua helada con la harina hasta obtener una masa suave y homogénea. Añade las verduras (zanahoria, papa y perejil) y mézclalas bien para que queden cubiertas uniformemente.",
+      "Fríe el kakiage: Calienta aceite vegetal en una sartén a 160 °C. Toma porciones de la mezcla con una cuchara y colócalas cuidadosamente en el aceite caliente. Fríe durante 4 minutos o hasta que estén dorados y crujientes. Retira y deja escurrir en papel absorbente.",
+      "Prepara la salsa Tendashi: En una cacerola, combina el agua, la salsa de soja, el azúcar y el alga kombu. Lleva a ebullición, retira el kombu y cuela la mezcla. Sirve la salsa en pequeños recipientes.",
+      "Sirve: Acompaña el kakiage con la salsa Tendashi. Si lo desea, añade daikon rallado o jengibre rallado como guarnición opcional.",
+      "Nota: Se pude remplazar las verduras del Kakiage por la de su preferencia. También puede mezclar las verduras con shitake.",
+      "Tip: El kakiage también es muy consumido en Japón sobre la sopa de udon."
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Dago-Jiru (Sopa con Dango y Verduras)",
+    "description": "Deliciosa sopa vegana de miso con dumplings (dango) y una combinación de vegetales frescos.",
+    "portions": "Rinde 4 porciones",
+    "ingredients": [
+      "1200 ml de caldo dashi vegano (o caldo de verduras)",
+      "2 hongos shiitake secos",
+      "150 g de daikon (nabo)",
+      "100 g o 1 zanahoria pequeña",
+      "50 g o 1/2 raíz de bardana (opcional, puede ser remplazada por otra verdura como papa ñame o batata)",
+      "3 a 4 cucharadas de pasta de miso",
+      "100 g de harina (para los dango)",
+      "Pizca de sal (para los dango)",
+      "50 ml de agua tibia (para los dango)"
+    ],
+    "image": "https://i.postimg.cc/d0w7b1Vv/dago-jiru.jpg",
+    "tags": "sopa, vegano, miso, dango, verduras, shitake, dango, dumplings",
+    "link": "./recetas/recipe",
+    "instruction": [
+      "Rehidratar los shiitake: Sumerge los hongos shiitake en 200 ml de agua tibia durante 1 a 2 horas. Si tiene tiempo, déjelos en remojo en agua fría durante la noche para obtener una mejor textura. Reserve el agua del remojo.",
+      "Preparar los dango: En un bol grande, coloca la harina. En otro recipiente, mezcla los 50 ml de agua tibia con una pizca de sal hasta que esta se disuelva. Agrega el agua salada a la harina y mezcla con palitos o una cuchara hasta que la mezcla sea homogénea. Amasa con las manos, cubre con papel film o un paño húmedo y deja reposar por 30 minutos.",
+      "Preparar los vegetales: Raspa la piel de la raíz de bardana con el dorso de un cuchillo hasta que la superficie esté blanca y enjuaga. Corta la bardana en láminas finas de 3 a 4 cm de largo usando un movimiento similar al de afilar un lápiz. Inmediatamente sumérgelas en agua para evitar que se oxiden.",
+      "Pelar y cortar: Pela el daikon y la zanahoria, córtalos por la mitad a lo largo y luego en cuartos. Corta el daikon en rodajas de 5 mm y la zanahoria en rodajas de 4 mm. Retira los tallos de los shiitake y corta los sombreros en láminas finas.",
+      "Cocinar el caldo: En una olla, combina el caldo dashi con 100 ml del agua del remojo de los shiitake. Añade el daikon, la zanahoria, los shiitake y las láminas de bardana escurridas. Calienta a fuego medio hasta que hierva, luego reduce a fuego bajo y retira la espuma que se forme.",
+      "Formar y cocinar los dango: Toma pequeñas porciones de la masa de dango (tamaño uva) y dales forma de discos delgados con los dedos, presionando ligeramente el centro para que se cocinen rápidamente. Agrégalos a la olla, coloca una tapa y cocina a fuego lento durante 30 minutos.",
+      "Verificar la cocción: Toma un dango y córtalo. Si el interior está transparente, retira la olla del fuego.",
+      "Agregar el miso: Coloca la pasta de miso en un colador con mango dentro de la olla. Con una cuchara, disuelve el miso en el caldo. Lleva la sopa a ebullición una vez más y retira del fuego.",
+      "Servir: Sirve la sopa en tazones. ¡Disfruta!",
+      "Tip: Para hacer un dashi vegano, en lugar de los ingredientes tradicionales como el bonito seco, se utiliza una base de kombu (alga marina) y shiitake deshidratados. Ambos ingredientes se remojan en agua fría durante varias horas o se calientan a fuego lento para extraer su sabor umami. Este caldo es ideal para complementar platos tradicionales como el Dago-jiru, manteniendo su esencia y respetando los principios de la cocina Shojin Ryori."
+    ],
+    "curiosidad": "El Dago-jiru es una sopa que se elabora amasando harina de trigo (o harina de arroz) con agua, dejando reposar la mezcla, y luego extendiéndola a mano para formar pequeños dumplings. Enriquecida con vegetales de temporada como taro y raíz de bardana, y sazonada con miso o salsa de soja, esta receta es nutritiva, fácil de preparar y muy sustanciosa. Durante generaciones, ha sido un alimento básico entre las jornadas agrícolas. \n\nLa palabra 'Dago' significa 'dango' en el dialecto de Kumamoto, lo que da lugar a su nombre alternativo: 'sopa de dango'. Aunque se consume en toda Kyushu, en la región de Kumamoto es común que los dango se elaboren con batatas, aportando un toque dulce y característico a esta sopa tradicional."
   }
 ]
