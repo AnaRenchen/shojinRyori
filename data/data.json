@@ -249,7 +249,7 @@
       "Aceite vegetal para freír",
       "Un toque de té verde en polvo o canela en polvo (opcional, para espolvorear)"
     ],
-    "image": "https://i.postimg.cc/mDrNrMLr/banana-tempura3.jpg",
+    "image": "https://i.postimg.cc/Kv6Y6VKD/banana-tempura.jpg",
     "tags": "banana, tempura, frito, postre, vegano, sésamo, matcha, canela",
     "link": "./recetas/recipe.html",
     "instruction": [
@@ -261,9 +261,9 @@
   },
   {
     "id": 11,
-    "title": "Hamburguesitas de Papa y Alga Nori",
-    "description": "Hamburgesitas crujientes de papa con alga nori, con un toque de salsa de soja y mirin.",
-    "portions": "Rinde 16 hamburguesitas",
+    "title": "Filets de Papa y Alga Nori",
+    "description": "Filets de papa con alga nori, con un toque de salsa de soja y mirin.",
+    "portions": "Rinde 9 filets",
     "ingredients": [
       "120 gramos de papas, peladas",
       "1 hoja de alga nori, aproximadamente 19x21 cm",
@@ -272,15 +272,15 @@
       "1 cucharadita de semillas de sésamo blanco, tostadas (opcional)",
       "Shichimi togarashi, para decorar (opcional)"
     ],
-    "image": "https://i.postimg.cc/tTkMxQZz/seaweed-patties.jpg",
-    "tags": "papa, alga nori, frito, japonés, vegano, hamburguesita, salsa de soja",
+    "image": "https://i.postimg.cc/mgK6NY5D/patties.jpg",
+    "tags": "papa, alga nori, frito, japonés, vegano, filet, salsa de soja",
     "link": "./recetas/recipe.html",
     "instruction": [
       "Puré de papa: En un procesador de alimentos, procesa las papas hasta obtener una pasta gruesa. Envuelve la pasta en papel absorbente para eliminar el exceso de humedad.",
-      "Armado de las hamburgesitas: Corta el alga nori en 16 cuadrados. Coloca una cucharada de puré de papa sobre cada cuadrado de nori.",
-      "Freír: Calienta el aceite de sésamo en una sartén. Fríe las hamburguesitas con el lado del nori hacia abajo hasta que el puré de papa esté dorado. Luego, fríe brevemente el lado del nori.",
-      "Servir: Coloca las hamburguesitas en un plato. Rocía con la mezcla de mirin y salsa de soja. Decora con semillas de sésamo tostado y shichimi togarashi al gusto.",
-      "Nota: El shichimi togarashi es una mezcla de especias japonesa que le dará un toque picante y aromático a tus tortitas. Si no tiene shichimi togarashi, puede utilizar otras especias como pimienta negra o paprika. Puede ajustar la cantidad de puré de papa en cada tortita según su preferencia."
+      "Armado de los filets: Corta el alga nori en 9 cuadrados. Coloca una cucharada de puré de papa sobre cada cuadrado de nori.",
+      "Freír: Calienta el aceite de sésamo en una sartén. Fríe los filets con el lado del nori hacia abajo hasta que el puré de papa esté dorado. Luego, fríe brevemente el lado del nori.",
+      "Servir: Coloca los filets en un plato. Rocía con la mezcla de mirin y salsa de soja. Decora con semillas de sésamo tostado y shichimi togarashi al gusto.",
+      "Nota: El shichimi togarashi es una mezcla de especias japonesa que le dará un toque picante y aromático a tus tortitas. Si no tiene shichimi togarashi, puede utilizar otras especias como pimienta negra o paprika. Puede ajustar la cantidad de puré de papa en cada filet según su preferencia."
     ]
   },
   {
